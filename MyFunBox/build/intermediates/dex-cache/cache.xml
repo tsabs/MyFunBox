@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\bast\Documents\LP\android\TP\MyFunBox\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\bast\Documents\LP\android\TP\MyFunBox\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cbbee3dad4f5addd8e5606ce8887cfca7c575a88\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\bast\Documents\LP\android\TP\MyFunBox\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5e051c16faac846e5beaadb505373b80cb4e689d">
+        <dex dex="C:\Users\bast\Documents\LP\android\TP\MyFunBox\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3e6cdd645b3ae44a83a25c6d5115cd40c6397b3b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\bast\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.51\e34fe80c9714240525f665113dd3749415515655\kotlin-stdlib-1.1.51.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e34fe80c9714240525f665113dd3749415515655">
+        <dex dex="C:\Users\bast\Documents\LP\android\TP\MyFunBox\app\build\intermediates\transforms\dex\debug\folders\1000\10\kotlin-stdlib-1.1.51_d9baf594437419353d03e1910e4c8d76e7c8058e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\bast\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jre7\1.1.51\8b5933578dc55f32cfc1a25f1db6371e4161fb8f\kotlin-stdlib-jre7-1.1.51.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8b5933578dc55f32cfc1a25f1db6371e4161fb8f">
+        <dex dex="C:\Users\bast\Documents\LP\android\TP\MyFunBox\app\build\intermediates\transforms\dex\debug\folders\1000\10\kotlin-stdlib-jre7-1.1.51_c905daebe70af39085704829730131a144bd3301\classes.dex" />
+    </item>
+
+</items>
