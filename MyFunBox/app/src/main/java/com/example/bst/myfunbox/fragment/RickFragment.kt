@@ -4,12 +4,14 @@ package com.example.bst.myfunbox.fragment
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.content.Context
+import android.media.MediaPlayer
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.bst.myfunbox.R
+import kotlinx.android.synthetic.main.fragment_rick.*
 
 
 /**
@@ -30,7 +32,21 @@ class RickFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        //Add directly in fragment working same as Main but not with button !
+        val mp : MediaPlayer = MediaPlayer.create(context, R.raw.rr1)
+        rb1.setOnClickListener(
+                mp.start()
+        )
+//
+//        list_View.setOnClickListener(View.OnClickListener {
+//            rb2.setOnClickListener(mp.start())
+//        })
+
         return inflater!!.inflate(R.layout.fragment_rick, container, false)
+    }
+        //Same thing
+    private fun Button.setOnClickListener(start: Unit) {
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

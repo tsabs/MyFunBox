@@ -9,6 +9,7 @@ class MyAdapter : BaseAdapter(){
     private val mContext: Context? = null
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
+
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
