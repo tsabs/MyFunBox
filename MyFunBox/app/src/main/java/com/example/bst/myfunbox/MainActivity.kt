@@ -11,22 +11,9 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import android.media.MediaPlayer
-import android.provider.MediaStore
-import android.text.Layout
-import android.view.View
-import android.view.ViewGroup
-import android.widget.*
-import com.example.bst.myfunbox.adapter.RButton
 import com.example.bst.myfunbox.fragment.AsterixFragment
 import com.example.bst.myfunbox.fragment.RickFragment
 import kotlinx.android.synthetic.main.nav_header_main.*
-import kotlinx.android.synthetic.main.rick_button.*
-import android.widget.AdapterView.OnItemClickListener
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_rick.*
-import kotlinx.android.synthetic.main.fragment_rick.view.*
-import kotlinx.android.synthetic.main.rick_button.view.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -53,7 +40,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView = findViewById(R.id.nav_view) as NavigationView
         navigationView.setNavigationItemSelectedListener(this)
-
 
     }
 
@@ -95,13 +81,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val fragment = RickFragment()
             t.replace(R.id.flContent, fragment)
             t.commit()
-            //Try to make code as teacher want
-//            val mp : MediaPlayer
-//            mp = MediaPlayer.create(this, R.raw.rr1)
-//            mp.start()
-//            button1.setOnClickListener(View.OnClickListener {
-//                mp.start()
-//            })
 
         } else if (id == R.id.nav_gallery) {
             imageView.setImageResource(R.drawable.asterix)

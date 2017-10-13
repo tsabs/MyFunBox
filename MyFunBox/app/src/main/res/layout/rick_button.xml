@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Button
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/linearViewR"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
-    android:text="Rick button"
-    android:id="@+id/buttonR">
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-</Button>
+    <Button
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Rick button"
+        android:id="@+id/buttonR">
+
+    </Button>
+</LinearLayout>

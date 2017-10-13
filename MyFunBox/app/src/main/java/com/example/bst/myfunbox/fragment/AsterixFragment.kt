@@ -8,7 +8,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ListView
 import com.example.bst.myfunbox.R
+import com.example.bst.myfunbox.adapter.MyAdapterA
+import com.example.bst.myfunbox.adapter.MyAdapterR
+import com.example.bst.myfunbox.model.Citation
+import kotlinx.android.synthetic.main.asterix_button.*
+import java.lang.ref.WeakReference
 
 
 /**
@@ -30,6 +36,20 @@ class AsterixFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         return inflater!!.inflate(R.layout.fragment_asterix, container, false)
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+
+        val list : ArrayList<Citation> = arrayListOf()
+        list.add(Citation("C'est quoi cette porte au plafond ,!"))
+        list.add(Citation("Another citation !"))
+//        list.add(Citation(buttonA.setText("C'est quoi cette porte au plafond")))
+
+
+        view!!.findViewById<ListView>(R.id.listViewA).adapter = MyAdapterA(WeakReference(context), list)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

@@ -5,24 +5,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.bst.myfunbox.fragment.AsterixFragment">
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/listViewA"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/ab1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="C'est quoi cette porte au plafond ?" />
 
-        <Button
-            android:id="@+id/ab2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Je pense que c'est avant tout des rencontres !" />
-
-
-    </LinearLayout>
+    </ListView>
 
 </FrameLayout>

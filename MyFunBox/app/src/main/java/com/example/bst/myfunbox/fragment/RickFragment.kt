@@ -5,13 +5,20 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.content.Context
 import android.media.MediaPlayer
+import android.support.design.widget.FloatingActionButton
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
+import android.support.v7.app.AppCompatActivity
+import android.view.*
+import android.view.View.generateViewId
+import android.view.View.inflate
+import android.widget.*
 import com.example.bst.myfunbox.R
+import com.example.bst.myfunbox.adapter.MyAdapterR
+import com.example.bst.myfunbox.model.Citation
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_rick.*
+import kotlinx.android.synthetic.main.rick_button.*
+import java.lang.ref.WeakReference
 
 
 /**
@@ -32,25 +39,20 @@ class RickFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        //Add directly in fragment working same as Main but not with button !
-        val mp : MediaPlayer = MediaPlayer.create(context, R.raw.rr1)
-        rb1.setOnClickListener(
-                mp.start()
-        )
-//
-//        list_View.setOnClickListener(View.OnClickListener {
-//            rb2.setOnClickListener(mp.start())
-//        })
+        val root = inflater!!.inflate(R.layout.fragment_rick, container, false)
 
-        return inflater!!.inflate(R.layout.fragment_rick, container, false)
-    }
-        //Same thing
-    private fun Button.setOnClickListener(start: Unit) {
-
+        return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val list : ArrayList<Citation> = arrayListOf()
+        list.add(Citation("Here just for create button"))
+        list.add(Citation("unsless for now"))
+        list.add(Citation("unsless for now"))
+
+        view!!.findViewById<ListView>(R.id.listViewR).adapter = MyAdapterR(WeakReference(context), list)
     }
 
     override fun onStart() {

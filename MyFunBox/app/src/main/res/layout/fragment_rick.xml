@@ -5,29 +5,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.bst.myfunbox.fragment.RickFragment">
 
-    <LinearLayout
-        android:id="@+id/list_View"
+    <!--<Button-->
+        <!--android:id="@+id/rb1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:actionViewClass="android.widget.Button"-->
+        <!--android:text="Impressionez moi !"-->
+        <!--/>-->
+
+    <ListView
+        android:id="@+id/listViewR"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/rb1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:actionViewClass="android.widget.Button"
-            android:text="Impressionez moi !"
-            />
-
-        <Button
-            android:id="@+id/rb2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="hello_rick_fragment"
-            />
-
-
-
+        android:layout_height="match_parent">
         <!--<include layout="@layout/rick_button" />-->
-    </LinearLayout>
+    </ListView>
 </FrameLayout>
