@@ -41,6 +41,7 @@ class RickFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val root = inflater!!.inflate(R.layout.fragment_rick, container, false)
 
+
         return root
     }
 
@@ -48,9 +49,11 @@ class RickFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val list : ArrayList<Citation> = arrayListOf()
-        list.add(Citation("Here just for create button"))
-        list.add(Citation("unsless for now"))
-        list.add(Citation("unsless for now"))
+        list.add(Citation("Impressionez moi !", R.raw.rr1))
+        list.add(Citation("unuse for now", 1))
+        list.add(Citation("unuse for now", 2))
+
+
 
         view!!.findViewById<ListView>(R.id.listViewR).adapter = MyAdapterR(WeakReference(context), list)
     }

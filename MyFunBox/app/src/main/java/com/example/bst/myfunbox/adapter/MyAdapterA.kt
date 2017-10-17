@@ -1,6 +1,7 @@
 package com.example.bst.myfunbox.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.View
@@ -9,16 +10,22 @@ import android.widget.BaseAdapter
 import android.widget.Button
 import com.example.bst.myfunbox.R
 import com.example.bst.myfunbox.model.Citation
+import com.example.bst.myfunbox.service.MyServices
 import java.lang.ref.WeakReference
 
 class MyAdapterA(val context : WeakReference<Context>, val elems : ArrayList<Citation>) : BaseAdapter(){
+
     override fun getView(position: Int, view: View?, container: ViewGroup?): View {
         val root = LayoutInflater.from(context.get()).inflate(R.layout.asterix_button, container, false)
-        val mp : MediaPlayer = MediaPlayer.create(context.get(), R.raw.rr1)
+        var mediaPlayer = Intent(context.get(), MyServices::class.java)
+        mediaPlayer.action = MyServices.ACTION_PLAY
+        mediaPlayer.putExtra(MyServices.MUSIC_RAW, elems[position].rawValue)
 
-        root.findViewById<Button>(R.id.buttonA).setOnClickListener({
-            mp.start()
-        })
+        root.setOnClickListener {
+            context.get()!!.startService(mediaPlayer)
+        }
+
+        root.findViewById<Button>(R.id.buttonA).text = elems[position].description
 
         return root
     }

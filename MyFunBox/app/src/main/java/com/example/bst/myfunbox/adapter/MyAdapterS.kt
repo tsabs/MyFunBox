@@ -4,10 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.EditText
-import android.widget.Switch
-import android.widget.TextView
+import android.widget.*
 import com.example.bst.myfunbox.R
 import com.example.bst.myfunbox.model.Settings
 import org.jetbrains.anko.find
@@ -17,8 +14,8 @@ class MyAdapterS(val context : WeakReference<Context>, val elems: ArrayList<Sett
     override fun getView(position: Int, view: View?, container: ViewGroup?): View {
         val root = LayoutInflater.from(context.get()).inflate(R.layout.setting_view, container, false)
 
-        root.findViewById<TextView>(R.id.name)
-        root.findViewById<Switch>(R.id.raw)
+        root.findViewById<TextView>(R.id.editName)
+        root.findViewById<Spinner>(R.id.language)
         root.findViewById<EditText>(R.id.comment)
 
         return root

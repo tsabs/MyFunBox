@@ -17,25 +17,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Scherrer"/>
-    <LinearLayout
+
+
+    <Spinner
+        android:id="@+id/language"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
+        android:layout_height="80dp"/>
 
-        <CheckBox
-            android:id="@+id/raw"
-            android:text="French"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            />
-
-        <CheckBox
-            android:id="@+id/raw2"
-            android:text="English"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"

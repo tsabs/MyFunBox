@@ -41,11 +41,9 @@ class AsterixFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         val list : ArrayList<Citation> = arrayListOf()
-        list.add(Citation("C'est quoi cette porte au plafond ,!"))
-        list.add(Citation("Another citation !"))
+        list.add(Citation("C'est quoi cette porte au plafond ?!", R.raw.rr1))
+        list.add(Citation("Another citation !",1))
 //        list.add(Citation(buttonA.setText("C'est quoi cette porte au plafond")))
 
 

@@ -1,5 +1,6 @@
 package com.example.bst.myfunbox
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -13,12 +14,14 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.bst.myfunbox.fragment.AsterixFragment
 import com.example.bst.myfunbox.fragment.RickFragment
+import com.example.bst.myfunbox.fragment.SettingsFragment
 import kotlinx.android.synthetic.main.nav_header_main.*
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     val manager = supportFragmentManager
+    val m = fragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +69,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
         return if (id == R.id.action_settings) {
+//            val t = manager.beginTransaction()
+//            val fragment = SettingsFragment()
+//            t.replace(R.id.flContent, fragment)
+//            t.commit()
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
             true
         } else super.onOptionsItemSelected(item)
 
@@ -95,6 +104,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
-
 
 }
