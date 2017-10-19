@@ -5,9 +5,17 @@
 
     <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="true"
-        android:key="switch_recommand"
-        android:title="Enable social recommandation"
+        android:key="switch"
+        android:title="Social recommandation"
         android:summary="Turn this option on or off"/>
+
+
+    <CheckBoxPreference
+        android:key="check"
+        android:title="Disable rotate screen"/>
+
+
+
 </PreferenceScreen>
 
 

@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView = findViewById(R.id.nav_view) as NavigationView
         navigationView.setNavigationItemSelectedListener(this)
 
+        val t = manager.beginTransaction()
+        val fragment = RickFragment()
+        t.replace(R.id.flContent, fragment)
+        t.commit()
     }
 
     override fun onBackPressed() {
