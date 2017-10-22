@@ -23,12 +23,13 @@ import com.example.bst.myfunbox.service.MyServices
 import kotlinx.android.synthetic.main.rick_button.*
 import org.jetbrains.anko.startService
 import java.lang.ref.WeakReference
+import kotlin.jvm.javaClass
 
 class MyAdapterR(val context: WeakReference<Context>, val elems : ArrayList<Citation>) : BaseAdapter(){
 
     override fun getView(position: Int, view: View?, container: ViewGroup?): View {
         val root = LayoutInflater.from(context.get()).inflate(R.layout.rick_button, container, false)
-        var mediaPlayer = Intent(context.get(), MyService::class.java)
+        var mediaPlayer = Intent(context.get(), MyService.javaClass)
         mediaPlayer.action = MyService.ACTION_PLAY
         mediaPlayer.putExtra(MyService.MUSIC_RAW_PARAM, elems[position].rawValue)
         root.setOnClickListener {

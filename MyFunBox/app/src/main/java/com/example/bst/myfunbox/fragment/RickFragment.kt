@@ -54,7 +54,6 @@ class RickFragment : Fragment() {
         list.add(Citation("unuse for now", 2))
 
 
-
         view!!.findViewById<ListView>(R.id.listViewR).adapter = MyAdapterR(WeakReference(context), list)
     }
 

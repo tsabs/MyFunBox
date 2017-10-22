@@ -2,6 +2,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <EditTextPreference
+        android:key="name"
+        android:title="Your Name"
+        android:summary="Provide your username"/>
+
 
     <android.support.v7.preference.SwitchPreferenceCompat
         android:defaultValue="true"
@@ -13,7 +18,6 @@
     <CheckBoxPreference
         android:key="check"
         android:title="Disable rotate screen"/>
-
 
 
 </PreferenceScreen>
